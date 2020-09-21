@@ -47,3 +47,7 @@ class masoform(Form):
 class formulartest(Form):
     a = FloatField("Strana a", validators=[InputRequired(message="vyzadovano"), NumberRange(min=0.01, message="Musi byt vetsi jak 0.01")])
     b = FloatField("Strana b", validators=[InputRequired(message="vyzadovano"), NumberRange(min=0.01, message="Musi byt vetsi jak 0.01")])
+    c = FloatField("Strana c", validators=[InputRequired(message="vyzadovano"),NumberRange(min=0.01, message="Musi byt vetsi jak 0.01")])
+
+    oo=SelectField("Typ vypoctu", choices=[(1, "Obvod"), (2, "Obsah")], default=2)
+    obrazec=SelectField("Obrazec", choices=[(1, "Ctverec A"), (2, "Obdelnik AB"), (3, "Trojuhelnik ABC")], default=1)

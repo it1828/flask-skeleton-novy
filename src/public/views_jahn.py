@@ -15,3 +15,8 @@ def formularjahntest():
     if form.validate_on_submit():
         return str(form.a.data * form.b.data)
     return render_template("public/formularjahntest.tmpl", form = form)
+
+@blueprint.route('/advancedforms', methods=['GET', 'POST'])
+def focdscdcrm():
+    form = formulartest()
+    return render_template('public/advancedform.tmpl', form = form)
